@@ -17,6 +17,8 @@ Python DB-API
 
 [Udacity VM](https://github.com/udacity/fullstack-nanodegree-vm)
 
+[News Database](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+
 ## Running the Program 
 
 This project is configured in the Udacity FSND Linux-Based Virtual Machine.
@@ -29,4 +31,11 @@ This project is configured in the Udacity FSND Linux-Based Virtual Machine.
 
 4. Call 'vagrant up' with Terminal or Command Line in the 'vagrant' directory. You can check your status by calling 'vagrant ssh'. This will launch the VM, givng you the capability to access the news database.
 
-5. Run 'newsdb.py' in Terminal / Command Line by calling 'python newsdb.py'. It will take a few seconds and then the output featured in 'output.txt' will be displayed in the shell. 
+5. Dowload the news database above and place the file in the 'vagrant' directory.
+    - In the terminal, call the following:
+      
+      `psql -d news -f newsdata.sql`
+      
+      This command will open psql, connect to the news database, and then run the psql commands inside newsdata.sql. 'newsdb.py' will now be able to access the database.
+
+6. Run 'newsdb.py' in Terminal / Command Line by calling 'python newsdb.py'. It will take a few seconds and then the output featured in 'output.txt' will be displayed in the shell. 
